@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 7-2 副詞節 例文解説</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', 'Inter', sans-serif;
+        }
+        .control-button:hover {
+            transform: scale(1.1);
+            transition: transform 0.2s;
+        }
+        .highlight {
+            color: #E53E3E; /* red-600 */
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        .highlight-exp {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        .explanation-panel, .recognition-panel {
+            transition: all 0.3s ease-in-out;
+        }
+        .recording {
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-4 sm:p-6 lg:p-8">
+        <header class="text-center mb-8">
+            <h1 class="text-3xl sm:text-4xl font-bold text-gray-800">Lesson 7-2 副詞節</h1>
+            <p class="text-gray-600 mt-2">例文 153～166 解説・音声・発音練習</p>
+        </header>
+
+        <main class="space-y-6" id="main-content">
+            <!-- C 時や理由を表す接続詞を使う -->
+            <section>
+                <h2 class="text-2xl font-bold text-gray-700 border-l-4 border-blue-500 pl-4 mb-4">C. 時や理由を表す接続詞を使う</h2>
+                <div id="sentences-c" class="space-y-4"></div>
+            </section>
+
+            <!-- D 譲歩や条件を表す接続詞や複合関係詞を使う -->
+            <section>
+                <h2 class="text-2xl font-bold text-gray-700 border-l-4 border-green-500 pl-4 mb-4">D. 譲歩や条件を表す接続詞や複合関係詞を使う</h2>
+                <div id="sentences-d" class="space-y-4"></div>
+            </section>
+
+            <!-- Expressions -->
+            <section>
+                <h2 class="text-2xl font-bold text-gray-700 border-l-4 border-purple-500 pl-4 mb-4">Expressions</h2>
+                <div id="sentences-expressions" class="space-y-4"></div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        const sentences = [
+            // C. 時や理由を表す接続詞を使う
+            { id: 153, category: 'c', en: "I was so happy <span class='highlight'>when</span> I saw my number on the bulletin board.", jp: "掲示板に自分の番号を見つけてとてもうれしかった。", explanation: "`when` は<span class='highlight-exp'>「～とき」</span>という意味で、2つの出来事が同時に起こることを示します。" },
+            { id: 154, category: 'c', en: "Sophia called me <span class='highlight'>while</span> I was taking a bath.", jp: "私がお風呂に入っている間にソフィアが電話をくれた。", explanation: "`while` は<span class='highlight-exp'>「～する間に」</span>という意味で、ある程度の長さを持つ動作や状態の期間中に別の出来事が起こることを示します。" },
+            { id: 155, category: 'c', en: "I have to finish my homework <span class='highlight'>by the time</span> the TV show starts.", jp: "そのテレビ番組が始まるまでに宿題を終えなければならない。", explanation: "`by the time` は<span class='highlight-exp'>「～する時までには」</span>という意味で、ある時点までに動作が完了することを示します。時や条件を表す副詞節の中では未来のことでも現在形を使います。" },
+            { id: 156, category: 'c', en: "I do volunteer work <span class='highlight'>partly because</span> I like meeting new people.", jp: "ボランティア活動をするのは，１つには新しい人と会うのが好きだからです。", explanation: "`partly because` は<span class='highlight-exp'>「１つには～だから」</span>と、理由の一部を述べるときに使います。" },
+            // D. 譲歩や条件を表す接続詞や複合関係詞を使う
+            { id: 157, category: 'd', en: "<span class='highlight'>Although</span> I was nervous at first, I was able to finish my speech successfully.", jp: "最初は緊張していたけれど，無事にスピーチを終えることができた。", explanation: "`Although` は<span class='highlight-exp'>「～だけれども」</span>という意味で、逆接の内容を導きます。" },
+            { id: 158, category: 'd', en: "I won’t change my opinion, <span class='highlight'>even if</span> nobody else agrees with me.", jp: "たとえほかに誰も賛成してくれなくても，私は自分の意見を変えません。", explanation: "`even if` は<span class='highlight-exp'>「たとえ～だとしても」</span>という意味で、仮定の条件を譲歩的に示します。" },
+            { id: 159, category: 'd', en: "Don’t open a file <span class='highlight'>unless</span> you trust the sender.", jp: "送信者が信用できなければ，ファイルを開いてはいけません。", explanation: "`unless` は<span class='highlight-exp'>「～でない限り」「もし～でなければ」</span>という意味で、`if ... not` とほぼ同じ意味を表します。" },
+            { id: 160, category: 'd', en: "<span class='highlight'>Whatever</span> the result may be, I’m pleased that I did my best.", jp: "結果がどうであっても，全力を尽くしたことに満足している。", explanation: "複合関係詞の `Whatever` は<span class='highlight-exp'>「何が～であっても」</span>という譲歩の意味を表す副詞節を導きます。" },
+            { id: 161, category: 'd', en: "<span class='highlight'>However</span> long it takes, we need to solve the problem.", jp: "どんなに時間がかかっても，私たちはその問題を解決する必要がある。", explanation: "複合関係詞の `However` は<span class='highlight-exp'>「どんなに～でも」</span>という譲歩の意味を表す副詞節を導きます。" },
+            // Expressions
+            { id: 162, category: 'expressions', en: "<span class='highlight'>As long as</span> you keep quiet, you can stay here.", jp: "静かにしているのなら，ここにいていいですよ。", explanation: "`As long as` は<span class='highlight-exp'>「～する限りは」「～でありさえすれば」</span>という条件を表します。" },
+            { id: 163, category: 'expressions', en: "<span class='highlight'>As far as</span> I know, he is a good guy.", jp: "私の知る限りでは，彼はいい人です。", explanation: "`As far as` は<span class='highlight-exp'>「～する限りでは」</span>と、判断の範囲を限定する表現です。" },
+            { id: 164, category: 'expressions', en: "I gave him my email address <span class='highlight'>so that</span> he could contact me later.", jp: "彼が後から私に連絡できるように，彼にメールアドレスを渡した。", explanation: "`so that ... can [could]` は<span class='highlight-exp'>「～できるように」</span>という目的を表します。" },
+            { id: 165, category: 'expressions', en: "The pain was <span class='highlight'>so</span> intense <span class='highlight'>that</span> I had trouble sleeping.", jp: "痛みがとても激しかったので私は眠れなかった。", explanation: "`so ... that ～` は<span class='highlight-exp'>「とても…なので～だ」</span>という結果・程度を表す構文です。" },
+            { id: 166, category: 'expressions', en: "<span class='highlight'>It is not until</span> we get sick <span class='highlight'>that</span> we realize the value of good health.", jp: "病気になって初めて，健康のありがたみがわかる。", explanation: "`It is not until ... that ～` は<span class='highlight-exp'>「…して初めて～する」</span>という意味の強調構文です。" }
+        ];
+        
+        // Speech Recognition setup
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        let recognition;
+
+        if (SpeechRecognition) {
+            recognition = new SpeechRecognition();
+            recognition.continuous = false;
+            recognition.lang = 'en-US';
+            recognition.interimResults = false;
+            recognition.maxAlternatives = 1;
+        } else {
+            console.log("Speech Recognition Not Supported");
+        }
+
+        function calculateSimilarity(s1, s2) {
+            let longer = s1;
+            let shorter = s2;
+            if (s1.length < s2.length) {
+                longer = s2;
+                shorter = s1;
+            }
+            let longerLength = longer.length;
+            if (longerLength === 0) {
+                return 1.0;
+            }
+            return (longerLength - editDistance(longer, shorter)) / parseFloat(longerLength);
+        }
+
+        function editDistance(s1, s2) {
+            s1 = s1.toLowerCase();
+            s2 = s2.toLowerCase();
+
+            const costs = [];
+            for (let i = 0; i <= s1.length; i++) {
+                let lastValue = i;
+                for (let j = 0; j <= s2.length; j++) {
+                    if (i == 0) {
+                        costs[j] = j;
+                    } else {
+                        if (j > 0) {
+                            let newValue = costs[j - 1];
+                            if (s1.charAt(i - 1) != s2.charAt(j - 1))
+                                newValue = Math.min(Math.min(newValue, lastValue),
+                                    costs[j]) + 1;
+                            costs[j - 1] = lastValue;
+                            lastValue = newValue;
+                        }
+                    }
+                }
+                if (i > 0)
+                    costs[s2.length] = lastValue;
+            }
+            return costs[s2.length];
+        }
+
+
+        function handleRecording(sentence, recordButton, resultPanel) {
+            if (!recognition) {
+                resultPanel.innerHTML = `<p class="text-red-500">お使いのブラウザは音声認識に対応していません。</p>`;
+                return;
+            }
+
+            if (recordButton.classList.contains('recording')) {
+                recognition.stop();
+                return;
+            }
+            
+            recognition.start();
+
+            recognition.onstart = () => {
+                recordButton.classList.add('recording');
+                recordButton.classList.remove('bg-green-500');
+                recordButton.classList.add('bg-red-500');
+                recordButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 10h.01M15 10h.01M9 14h6" /></svg>`; // Stop icon
+                resultPanel.innerHTML = `<p class="text-gray-500">録音中...</p>`;
+            };
+
+            recognition.onend = () => {
+                recordButton.classList.remove('recording');
+                recordButton.classList.remove('bg-red-500');
+                recordButton.classList.add('bg-green-500');
+                recordButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v3a3 3 0 01-3 3z" /></svg>`; // Mic icon
+            };
+
+            recognition.onresult = (event) => {
+                const transcript = event.results[0][0].transcript;
+                const cleanOriginal = sentence.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").toLowerCase();
+                const cleanTranscript = transcript.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").toLowerCase();
+                
+                const similarity = calculateSimilarity(cleanOriginal, cleanTranscript);
+                const score = Math.round(similarity * 100);
+
+                let feedback = '';
+                let colorClass = '';
+                if (score >= 85) {
+                    feedback = '素晴らしい！';
+                    colorClass = 'text-green-600';
+                } else if (score >= 65) {
+                    feedback = '惜しい！';
+                    colorClass = 'text-yellow-600';
+                } else {
+                    feedback = 'もう一度！';
+                    colorClass = 'text-red-600';
+                }
+
+                resultPanel.innerHTML = `
+                    <p class="text-gray-800">あなたの発音: 「${transcript}」</p>
+                    <div class="flex items-center mt-2">
+                        <p class="font-bold ${colorClass}">${feedback}</p>
+                        <p class="ml-4 text-sm text-gray-600">スコア: ${score}点</p>
+                    </div>
+                `;
+            };
+
+            recognition.onerror = (event) => {
+                 resultPanel.innerHTML = `<p class="text-red-500">エラーが発生しました: ${event.error}</p>`;
+            };
+        }
+
+
+        function createSentenceCard(sentence) {
+            const card = document.createElement('div');
+            card.className = 'bg-white p-4 rounded-lg shadow-md';
+            
+            const contentAndControls = document.createElement('div');
+            contentAndControls.className = 'flex items-start space-x-4';
+
+            const numberDiv = document.createElement('div');
+            numberDiv.className = 'flex-shrink-0 bg-gray-200 text-gray-700 font-bold rounded-full h-8 w-8 flex items-center justify-center text-sm';
+            numberDiv.textContent = String(sentence.id);
+
+            const textContentDiv = document.createElement('div');
+            textContentDiv.className = 'flex-grow';
+
+            const enP = document.createElement('p');
+            enP.className = 'text-lg text-gray-800 font-medium';
+            enP.innerHTML = sentence.en;
+
+            const jpP = document.createElement('p');
+            jpP.className = 'text-gray-600 mt-1';
+            jpP.textContent = sentence.jp;
+            
+            textContentDiv.appendChild(enP);
+            textContentDiv.appendChild(jpP);
+
+            const controlsDiv = document.createElement('div');
+            controlsDiv.className = 'flex items-center space-x-2 ml-2';
+
+            const audioButton = document.createElement('button');
+            audioButton.className = 'control-button p-2 rounded-full bg-blue-500 text-white hover:bg-blue-600 focus:outline-none';
+            audioButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /></svg>`;
+            audioButton.onclick = () => {
+                if (speechSynthesis.speaking) speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(sentence.en.replace(/<[^>]*>?/gm, ''));
+                utterance.lang = 'en-US';
+                speechSynthesis.speak(utterance);
+            };
+
+            const recordButton = document.createElement('button');
+            recordButton.className = 'control-button p-2 rounded-full bg-green-500 text-white hover:bg-green-600 focus:outline-none';
+            recordButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v3a3 3 0 01-3 3z" /></svg>`;
+
+            const toggleButton = document.createElement('button');
+            toggleButton.className = 'control-button text-xs px-2 py-1 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300';
+            toggleButton.textContent = '解説';
+            
+            controlsDiv.appendChild(audioButton);
+            controlsDiv.appendChild(recordButton);
+            controlsDiv.appendChild(toggleButton);
+            
+            contentAndControls.appendChild(numberDiv);
+            contentAndControls.appendChild(textContentDiv);
+            contentAndControls.appendChild(controlsDiv);
+
+            const explanationPanel = document.createElement('div');
+            explanationPanel.className = 'explanation-panel hidden mt-3 pt-3 border-t border-gray-200';
+            explanationPanel.innerHTML = `<p class="text-gray-700 bg-gray-50 p-3 rounded-md">${sentence.explanation}</p>`;
+            
+            toggleButton.onclick = () => {
+                explanationPanel.classList.toggle('hidden');
+            };
+
+            const recognitionPanel = document.createElement('div');
+            recognitionPanel.className = 'recognition-panel mt-3 pt-3 border-t border-gray-200';
+
+            recordButton.onclick = () => handleRecording(sentence.en.replace(/<[^>]*>?/gm, ''), recordButton, recognitionPanel);
+
+
+            card.appendChild(contentAndControls);
+            card.appendChild(explanationPanel);
+            card.appendChild(recognitionPanel);
+
+            return card;
+        }
+
+        function renderSentences() {
+            if (!SpeechRecognition) {
+                const mainContent = document.getElementById('main-content');
+                const warning = document.createElement('div');
+                warning.className = 'bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-6 rounded-md';
+                warning.innerHTML = '<p class="font-bold">音声認識機能が利用できません</p><p>お使いのブラウザは音声認識に対応していないか、マイクへのアクセスが許可されていません。発音練習機能を利用するには、Google Chromeなどの対応ブラウザをご利用ください。</p>';
+                mainContent.prepend(warning);
+            }
+
+            const containerC = document.getElementById('sentences-c');
+            const containerD = document.getElementById('sentences-d');
+            const containerExpressions = document.getElementById('sentences-expressions');
+
+            sentences.forEach(sentence => {
+                const card = createSentenceCard(sentence);
+                if (sentence.category === 'c') {
+                    containerC.appendChild(card);
+                } else if (sentence.category === 'd') {
+                    containerD.appendChild(card);
+                } else if (sentence.category === 'expressions') {
+                    containerExpressions.appendChild(card);
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', renderSentences);
+    </script>
+</body>
+</html>
